@@ -1,0 +1,13 @@
+ext {
+    android = [
+
+            buildToolsVersion: '27.0.0',
+            supportVersion   : '27.0.0',
+            minSdkVersion    : 19,
+            compileSdkVersion: 26,
+            targetSdkVersion : 25,
+            applicationId    : "com.msymobile.dotest",
+            versionCode      : 1,
+            versionName      : "1.0.0",
+    ]
+}

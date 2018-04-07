@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DOTest</string>
+    <string name="fixer_helper">汇率助手</string>
+    <string name="refresh">更新</string>
+    <string name="request_icon">请求图标</string>
+    <string name="request_fixer">请求汇率</string>
+    <string name="input_url">请输入网址</string>
+    <string name="analysis">解析</string>
+    <string name="icon_content_description">获取到的icon图片</string>
+</resources>

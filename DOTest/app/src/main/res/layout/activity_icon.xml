@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_value"
+        android:layout_marginTop="@dimen/nav_bar_height"
+        android:text="@string/input_url"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/input_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:layout_marginEnd="@dimen/margin_value"
+        android:layout_marginStart="@dimen/margin_value"
+        android:layout_marginTop="@dimen/margin_value"
+        android:background="@drawable/edit_border"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_tv"/>
+
+    <Button
+        android:id="@+id/analysis_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:layout_marginEnd="@dimen/margin_value"
+        android:layout_marginStart="@dimen/margin_value"
+        android:layout_marginTop="@dimen/margin_value"
+        android:background="@drawable/button_shape"
+        android:text="@string/analysis"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_et"/>
+
+    <ImageView
+        android:id="@+id/icon_iv"
+        android:layout_width="@dimen/image_height"
+        android:layout_height="@dimen/image_height"
+        android:scaleType="center"
+        android:layout_marginTop="@dimen/nav_bar_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/analysis_btn"
+        android:contentDescription="@string/icon_content_description"/>
+</android.support.constraint.ConstraintLayout>
