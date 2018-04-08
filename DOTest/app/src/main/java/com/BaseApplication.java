@@ -1,10 +1,10 @@
 package com;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.facebook.stetho.Stetho;
 import com.msymobile.dotest.util.ContextUtil;
+import com.msymobile.dotest.util.ToastUtil;
 
 import io.reactivex.plugins.RxJavaPlugins;
 
@@ -21,6 +21,6 @@ public class BaseApplication extends Application {
         super.onCreate();
         ContextUtil.init(this);
         Stetho.initializeWithDefaults(this);
-        RxJavaPlugins.setErrorHandler(throwable -> Log.e("hannibal", "throw test" + throwable.getMessage()));
+        RxJavaPlugins.setErrorHandler(throwable -> ToastUtil.makeText(throwable.getMessage()));
     }
 }
