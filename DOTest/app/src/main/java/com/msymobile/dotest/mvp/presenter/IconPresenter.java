@@ -38,9 +38,9 @@ public class IconPresenter extends BaseLifecyclePresenter<IconConstract.IIconVie
                 })
                 .doOnError(throwable -> {
                     RetrofitSington.disposeFailureInfo(throwable);
-                    getView().getContext().hideWaitingDialog();
-                    Log.e("hannibal", throwable.getMessage());
+                    IconPresenter.this.getView().getContext().hideWaitingDialog();
+                    Log.e("hannibal", "error : " + throwable.getMessage());
                 })
-                .subscribe(o -> getView().iconInfo((IconXmlEntity)o));
+                .subscribe(o -> getView().iconInfo((IconXmlEntity) o));
     }
 }

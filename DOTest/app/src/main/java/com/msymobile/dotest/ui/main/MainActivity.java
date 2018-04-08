@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -17,7 +16,6 @@ import com.msymobile.dotest.mvp.presenter.InstallPresenter;
 import com.msymobile.dotest.mvp.presenter.MainPresenter;
 import com.msymobile.dotest.mvp.view.BaseActivity;
 import com.msymobile.dotest.util.RxClick;
-import com.msymobile.dotest.util.SortUtil;
 import com.msymobile.dotest.util.keyboard.KeyboardManager;
 
 import java.util.ArrayList;
@@ -68,10 +66,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     @Override
     protected void initData(Bundle saveInstanceState) {
         getPresenter().getFixer();
-        for (String x :
-                SortUtil.getSortData()) {
-            Log.e("hannibal", "___" + x);
-        }
     }
 
     @Override

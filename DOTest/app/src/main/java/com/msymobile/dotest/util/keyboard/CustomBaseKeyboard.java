@@ -17,6 +17,8 @@ public abstract class CustomBaseKeyboard extends Keyboard implements KeyboardVie
 
     private EditText etCurrent;
     private View nextFocusView;
+    static final int CANCEL_KEY = -30;
+    private static final int POINT_KEY = 46;
 
     CustomBaseKeyboard(Context context, int xmlLayoutResId) {
         super(context, xmlLayoutResId);
@@ -50,9 +52,9 @@ public abstract class CustomBaseKeyboard extends Keyboard implements KeyboardVie
             Editable editable = etCurrent.getText();
             int start = etCurrent.getSelectionStart();
 
-            if (primaryCode == -30) { //隐藏
+            if (primaryCode == CANCEL_KEY) { //隐藏
                 hideKeyboard();
-            } else if (primaryCode == 46) { //小数点
+            } else if (primaryCode == POINT_KEY) { //小数点
                 if (!editable.toString().contains(".")) {
                     editable.insert(start, Character.toString((char) primaryCode));
                 }

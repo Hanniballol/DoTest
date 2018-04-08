@@ -50,6 +50,9 @@ public class KeyboardManager {
         mKeyboard = new CustomBaseKeyboard(activity, R.xml.soft_keyboard) {
             @Override
             public boolean handleSpecialKey(EditText etCurrent, int primaryCode) {
+                if (primaryCode == CANCEL_KEY) {
+                    hideSoftKeyboard();
+                }
                 return false;
             }
         };
@@ -84,7 +87,6 @@ public class KeyboardManager {
 
     public void hideSoftKeyboard() {
         if (null == mKeyboardViewContainer) return;
-        if (null == mCurrentEt ||mCurrentEt.isFocused()) return;
         mKeyboardViewContainer.setVisibility(View.GONE);
         mKeyboardViewContainer.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.up_to_hide));
     }
