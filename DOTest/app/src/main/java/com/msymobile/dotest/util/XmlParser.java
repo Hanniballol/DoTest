@@ -1,7 +1,5 @@
 package com.msymobile.dotest.util;
 
-import android.util.Log;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
